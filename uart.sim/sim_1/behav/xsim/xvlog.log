@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/laperex/Programming/Vivado/uart/uart.srcs/sources_1/new/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-311] analyzing module serial_uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/laperex/Programming/Vivado/uart/uart.srcs/sim_1/new/interface_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module interface_tb

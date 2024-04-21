@@ -10,7 +10,7 @@ module interface(clk, reset, sw, led, btn);
 
 	reg [15: 0] value;
 	
-	initial value = 38;
+	// initial value = 38;
 	
 	// wire scl;
 	// wire sda;

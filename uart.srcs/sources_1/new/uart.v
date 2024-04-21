@@ -1,87 +1,105 @@
-
-
-module serial_uart_tx(clk, reset, data, start, stop, tx);
+module m_uart_tx #(CLKS_PER_BIT = 87) (clk, reset, wr_en, wr, tx_sr, tx_done);
 	input clk;
 	input reset;
 
-	input [7: 0] data;
+	input wr_en;
+	input [7: 0] wr;
 
-	input start;
-	output stop;
-
-	output reg tx;
-
-	parameter UART_IDLE = 5;
-	parameter UART_START = 1;
-	parameter UART_DATA = 2;
-	parameter UART_STOP = 3;
+	output reg tx_sr;
+	output reg tx_done;
 	
-	reg [3: 0] i;
-	reg [7: 0] i_clk_count;
-	reg [7: 0] i_clk;
-	reg [3: 0] u_state;
-	
-	reg uart_clk;
 
-	assign stop = (u_state == UART_STOP);
+	reg [9: 0] wr_byte;
+	reg [8: 0] counter;
+
 
 	always @(posedge clk) begin
 		if (reset) begin
-			i <= 0;
-			tx <= 1;
-			u_state <= UART_IDLE;
-			i_clk_count <= 0;
-			uart_clk <= 0;
+			counter <= 0;
+			
+			tx_sr <= 1;
+
+			tx_done <= 1;
 		end else begin
-			if (i_clk_count == 0) begin
-				uart_clk <= 1;
-				i_clk_count <= 87 - 1;
-			end else begin
-				i_clk_count <= i_clk_count - 1;
-				if (uart_clk == 1) begin
-					uart_clk <= 0;
+			if (wr_en) begin
+				counter <= CLKS_PER_BIT - 1;
+
+				wr_byte[9] <= 1;
+				wr_byte[8: 1] <= wr[7: 0];
+				wr_byte[0] <= 0;
+
+				tx_done <= 0;
+			end else if (tx_done == 0) begin
+				tx_sr <= wr_byte[0];
+
+				if (counter == 0) begin
+					counter <= CLKS_PER_BIT - 1;
+
+					if (wr_byte == 1) begin
+						tx_done <= 1;
+					end else begin
+						wr_byte <= wr_byte >> 1;
+					end
+				end else begin
+					counter <= counter - 1;
 				end
 			end
 		end
 	end
+endmodule
+
+
+
+module m_uart_rx #(CLKS_PER_BIT = 87) (clk, reset, rx_sr, rd_en, rd);
+	input clk;
+	input reset;
+
+	input rx_sr;
+
+	output rd_en;
+	output reg [7: 0] rd;
+
+
+	reg rx_en;
+
+	reg [9: 0] rd_byte;
+	reg [8: 0] counter;
+	reg [4: 0] i;
+
 
 	always @(posedge clk) begin
-		if (reset == 0) begin
-			case (u_state)
-				UART_START: if (uart_clk) begin
-					tx <= 0;
-					u_state <= UART_DATA;
-				end
+		if (reset) begin
+			counter <= 0;
+			rd_byte <= 0;
 
-				UART_DATA: if (uart_clk) begin
-					tx <= data[7 - i];
+			i <= 0;
+		end else begin
+			if (rx_sr == 0) begin
+				rx_en <= 1;
+			end
+
+			if (rx_en) begin
+				if (counter == 0) begin
+					counter <= CLKS_PER_BIT - 1;
 					
-					if (i == 7) begin
-						u_state <= UART_STOP;
-						// stop <= 1;
+					rd_byte[9] <= rx_sr;
+					rd_byte[8: 0] <= rd_byte[9: 1];
+					
+					if (i == 9) begin
 						i <= 0;
+						rx_en <= 0;
+						rd_byte <= 0;
+						
+						rd[7: 0] <= rd_byte[9: 2];
+						
+						counter <= 0;
 					end else begin
 						i <= i + 1;
 					end
+				end else begin
+					counter <= counter - 1;
 				end
-				
-				UART_STOP: if (uart_clk) begin
-					tx <= 1;
-					u_state <= UART_IDLE;
-				end
-				
-				UART_IDLE: if (uart_clk) begin
-					if (start) begin
-						u_state <= UART_START;
-						// stop <= 0;
-					end
-				end
-					
-				
-				default: begin
-					
-				end
-			endcase
+			end
 		end
 	end
 endmodule

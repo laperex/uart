@@ -3,69 +3,102 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="interface_tb_behav.wdb" id="1">
+      <db_ref path="uart_tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="interface_tb" />
+            <top_module name="uart_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="81.750001 us"></ZoomEndTime>
-      <Cursor1Time time="52.350000 us"></Cursor1Time>
+      <ZoomEndTime time="212.200001 us"></ZoomEndTime>
+      <Cursor1Time time="0.935000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="181"></NameColumnWidth>
-      <ValueColumnWidth column_width="131"></ValueColumnWidth>
+      <NameColumnWidth column_width="214"></NameColumnWidth>
+      <ValueColumnWidth column_width="168"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject type="logic" fp_name="/interface_tb/m_serial_uart_tx/clk">
+   <WVObjectSize size="20" />
+   <wvobject type="logic" fp_name="/uart_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/interface_tb/m_serial_uart_tx/reset">
+   <wvobject type="logic" fp_name="/uart_tb/reset">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/interface_tb/m_serial_uart_tx/data">
-      <obj_property name="ElementShortName">data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   <wvobject type="array" fp_name="/uart_tb/data">
+      <obj_property name="ElementShortName">data[20:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[20:0][7:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/interface_tb/m_serial_uart_tx/start">
-      <obj_property name="ElementShortName">start</obj_property>
-      <obj_property name="ObjectShortName">start</obj_property>
+   <wvobject type="logic" fp_name="/uart_tb/wr_en">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/interface_tb/m_serial_uart_tx/tx">
-      <obj_property name="ElementShortName">tx</obj_property>
-      <obj_property name="ObjectShortName">tx</obj_property>
+   <wvobject type="array" fp_name="/uart_tb/wr">
+      <obj_property name="ElementShortName">wr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wr[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/interface_tb/m_serial_uart_tx/i">
-      <obj_property name="ElementShortName">i[3:0]</obj_property>
-      <obj_property name="ObjectShortName">i[3:0]</obj_property>
+   <wvobject type="logic" fp_name="/uart_tb/tx_sr_en">
+      <obj_property name="ElementShortName">tx_sr_en</obj_property>
+      <obj_property name="ObjectShortName">tx_sr_en</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/interface_tb/m_serial_uart_tx/u_state">
-      <obj_property name="ElementShortName">u_state[3:0]</obj_property>
-      <obj_property name="ObjectShortName">u_state[3:0]</obj_property>
+   <wvobject type="logic" fp_name="/uart_tb/tx_sr_done">
+      <obj_property name="ElementShortName">tx_sr_done</obj_property>
+      <obj_property name="ObjectShortName">tx_sr_done</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/interface_tb/m_serial_uart_tx/uart_clk">
-      <obj_property name="ElementShortName">uart_clk</obj_property>
-      <obj_property name="ObjectShortName">uart_clk</obj_property>
+   <wvobject type="logic" fp_name="/uart_tb/tx_sr_out">
+      <obj_property name="ElementShortName">tx_sr_out</obj_property>
+      <obj_property name="ObjectShortName">tx_sr_out</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/interface_tb/m_serial_uart_tx/UART_IDLE">
-      <obj_property name="ElementShortName">UART_IDLE[31:0]</obj_property>
-      <obj_property name="ObjectShortName">UART_IDLE[31:0]</obj_property>
+   <wvobject type="array" fp_name="/uart_tb/i">
+      <obj_property name="ElementShortName">i[16:0]</obj_property>
+      <obj_property name="ObjectShortName">i[16:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/interface_tb/m_serial_uart_tx/UART_START">
-      <obj_property name="ElementShortName">UART_START[31:0]</obj_property>
-      <obj_property name="ObjectShortName">UART_START[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/uart_tb/tx_sr">
+      <obj_property name="ElementShortName">tx_sr</obj_property>
+      <obj_property name="ObjectShortName">tx_sr</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/interface_tb/m_serial_uart_tx/UART_DATA">
-      <obj_property name="ElementShortName">UART_DATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">UART_DATA[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/uart_tb/tx_done">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/interface_tb/m_serial_uart_tx/UART_STOP">
-      <obj_property name="ElementShortName">UART_STOP[31:0]</obj_property>
-      <obj_property name="ObjectShortName">UART_STOP[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/uart_tb/tx/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/uart_tb/tx/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/uart_tb/tx/wr_en">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/uart_tb/tx/wr">
+      <obj_property name="ElementShortName">wr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wr[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/uart_tb/tx/tx_sr">
+      <obj_property name="ElementShortName">tx_sr</obj_property>
+      <obj_property name="ObjectShortName">tx_sr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/uart_tb/tx/tx_done">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/uart_tb/tx/wr_byte">
+      <obj_property name="ElementShortName">wr_byte[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_byte[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/uart_tb/tx/counter">
+      <obj_property name="ElementShortName">counter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/uart_tb/tx/CLKS_PER_BIT">
+      <obj_property name="ElementShortName">CLKS_PER_BIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLKS_PER_BIT[31:0]</obj_property>
    </wvobject>
 </wave_config>

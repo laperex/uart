@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Apr 21 16:07:09 2024
+# Process ID: 1149948
+# Current directory: /home/laperex/Programming/Vivado/uart
+# Command line: vivado -mode tcl
+# Log file: /home/laperex/Programming/Vivado/uart/vivado.log
+# Journal file: /home/laperex/Programming/Vivado/uart/vivado.jou
+# Running On: laperex-l5ip, OS: Linux, CPU Frequency: 400.087 MHz, CPU Physical cores: 14, Host memory: 16478 MB
+#-----------------------------------------------------------
+open_project uart.xpr 
+start_gui
+update_compile_order -fileset sources_1

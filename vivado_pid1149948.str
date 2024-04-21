@@ -1,0 +1,203 @@
+/*
+
+AMD Vivado v2023.2 (64-bit) [Major: 2023, Minor: 2]
+SW Build: 4029153 on Fri Oct 13 20:13:54 MDT 2023
+IP Build: 4028589 on Sat Oct 14 00:45:43 MDT 2023
+IP Build: 4028589 on Sat Oct 14 00:45:43 MDT 2023
+
+Process ID (PID): 1149948
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sun Apr 21 16:07:35 IST 2024
+Time zone: 	India Standard Time (Asia/Kolkata)
+
+OS: Linux
+OS Version: 6.8.7-zen1-1-zen
+OS Architecture: amd64
+Available processors (cores): 20
+
+Display: 0
+Screen size: 2560x1600
+Local screen bounds: x = 0, y = 0, width = 2560, height = 1600
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: true
+
+Java version: 	17.0.7 64-bit
+JavaFX version: 17.0.1
+Java home: 	/opt/Xilinx/Vivado/2023.2/tps/lnx64/jre17.0.7_7
+Java executable: 	/opt/Xilinx/Vivado/2023.2/tps/lnx64/jre17.0.7_7/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	laperex
+User home directory: /home/laperex
+User working directory: /home/laperex/Programming/Vivado/uart
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2023.2
+RDI_DATADIR: /opt/Xilinx/SharedData/2023.2/data:/opt/Xilinx/Vivado/2023.2/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2023.2/bin
+
+Vivado preferences file: /home/laperex/.Xilinx/Vivado/2023.2/vivado.xml
+Vivado preferences directory: /home/laperex/.Xilinx/Vivado/2023.2/
+Vivado layouts directory: /home/laperex/.Xilinx/Vivado/2023.2/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2023.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/laperex/Programming/Vivado/uart/vivado.log
+Vivado journal file: 	/home/laperex/Programming/Vivado/uart/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1149948-laperex-l5ip
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /opt/Xilinx/Vivado/2023.2
+RDI_BASEROOT: /opt/Xilinx/Vivado
+RDI_BINROOT: /opt/Xilinx/Vivado/2023.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /opt/Xilinx/SharedData/2023.2/data:/opt/Xilinx/Vivado/2023.2/data
+RDI_INSTALLROOT: /opt/Xilinx
+RDI_INSTALLVER: 2023.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 17.0.7_7
+RDI_LIBDIR: /opt/Xilinx/Vivado/2023.2/lib/lnx64.o/Default:/opt/Xilinx/Vivado/2023.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /opt/Xilinx/Vivado/2023.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /opt/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/laperex/Programming/Vivado/uart:laperex-l5ip_1713695828_1149859
+RDI_SHARED_DATA: /opt/Xilinx/SharedData/2023.2/data
+RDI_TPS_ROOT: /opt/Xilinx/Vivado/2023.2/tps/lnx64
+RDI_USE_JDK17: True
+SHELL: /bin/zsh
+XILINX: /opt/Xilinx/Vivado/2023.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@192.168.100.24
+XILINX_DSP: /opt/Xilinx/Vivado/2023.2/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2023.2
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2023.2
+XILINX_VIVADO: /opt/Xilinx/Vivado/2023.2
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2023.2
+_JAVA_AWT_WM_NONREPARENTING: 1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,756 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 74 MB (+74957kb) [00:00:02]
+// [Engine Memory]: 1,930 MB (+1871903kb) [00:00:02]
+// [GUI Memory]: 114 MB (+38045kb) [00:00:02]
+// Tcl Message: open_project uart.xpr  
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/laperex/Programming/Vivado/uart/uart.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: uart 
+// Tcl Message: start_gui 
+// [GUI Memory]: 147 MB (+29062kb) [00:00:05]
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,801 MB. GUI used memory: 79 MB. Current time: 4/21/24, 4:07:37 PM IST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, serial_uart_tx (uart.v)]", 1, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01m:02s
+// Elapsed Time for: 'L.f': 01m:04s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 01m:06s
+// Elapsed Time for: 'L.f': 01m:08s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,787 MB. GUI used memory: 80 MB. Current time: 4/21/24, 4:08:41 PM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01m:38s
+// Elapsed Time for: 'L.f': 01m:40s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04m:46s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 04m:48s
+// Elapsed Time for: 'L.f': 04m:50s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,842 MB. GUI used memory: 80 MB. Current time: 4/21/24, 4:12:21 PM IST
+// Elapsed Time for: 'L.f': 04m:52s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05m:06s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05m:08s
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05m:10s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,877 MB. GUI used memory: 80 MB. Current time: 4/21/24, 4:12:41 PM IST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 05m:12s
+// Elapsed Time for: 'L.f': 05m:14s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05m:36s
+// Elapsed Time for: 'L.f': 05m:38s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,921 MB. GUI used memory: 80 MB. Current time: 4/21/24, 4:13:11 PM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 05m:44s
+// Elapsed Time for: 'L.f': 05m:46s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 06m:00s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,949 MB. GUI used memory: 80 MB. Current time: 4/21/24, 4:13:31 PM IST
+// Elapsed Time for: 'L.f': 06m:02s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 06m:22s
+// Elapsed Time for: 'L.f': 06m:24s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,975 MB. GUI used memory: 80 MB. Current time: 4/21/24, 4:13:56 PM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 06m:32s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 06m:34s
+// Elapsed Time for: 'L.f': 06m:36s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 06m:40s
+// Elapsed Time for: 'L.f': 06m:42s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 10m:28s
+// [Engine Memory]: 2,036 MB (+9921kb) [00:10:31]
+// Elapsed Time for: 'L.f': 10m:30s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,046 MB. GUI used memory: 80 MB. Current time: 4/21/24, 4:18:01 PM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 11m:44s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 11m:46s
+// Elapsed Time for: 'L.f': 11m:48s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,080 MB. GUI used memory: 80 MB. Current time: 4/21/24, 4:19:22 PM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 11m:58s
+// Elapsed Time for: 'L.f': 12m:00s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 12m:18s
+// Elapsed Time for: 'L.f': 12m:20s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,116 MB. GUI used memory: 80 MB. Current time: 4/21/24, 4:19:51 PM IST
+// [GUI Memory]: 155 MB (+819kb) [00:31:40]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,117 MB. GUI used memory: 81 MB. Current time: 4/21/24, 4:49:52 PM IST

@@ -5,7 +5,7 @@ module m_uart_tx #(CLKS_PER_BIT = 87) (clk, reset, wr_en, wr, tx_sr, tx_done);
 	input wr_en;
 	input [7: 0] wr;
 
-	output reg tx_sr;
+	output reg tx_sr = 1;
 	output reg tx_done;
 	
 
@@ -56,7 +56,7 @@ module m_uart_rx #(CLKS_PER_BIT = 87) (clk, reset, rx_sr, rd_en, rd);
 
 	input rx_sr;
 
-	output rd_en;
+	output reg rd_en;
 	output reg [7: 0] rd;
 
 
@@ -89,9 +89,10 @@ module m_uart_rx #(CLKS_PER_BIT = 87) (clk, reset, rx_sr, rd_en, rd);
 						i <= 0;
 						rx_en <= 0;
 						rd_byte <= 0;
-						
+
 						rd[7: 0] <= rd_byte[9: 2];
-						
+						rd_en <= 1;
+
 						counter <= 0;
 					end else begin
 						i <= i + 1;
@@ -99,6 +100,8 @@ module m_uart_rx #(CLKS_PER_BIT = 87) (clk, reset, rx_sr, rd_en, rd);
 				end else begin
 					counter <= counter - 1;
 				end
+			end else begin
+				rd_en <= 0;
 			end
 		end
 	end

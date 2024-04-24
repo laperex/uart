@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="64.351 ns"></ZoomEndTime>
-      <Cursor1Time time="0.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="429.200001 us"></ZoomEndTime>
+      <Cursor1Time time="0.000000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="214"></NameColumnWidth>
-      <ValueColumnWidth column_width="152"></ValueColumnWidth>
+      <ValueColumnWidth column_width="144"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="49" />
+   <WVObjectSize size="57" />
    <wvobject type="logic" fp_name="/uart_tb/m_interface/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -51,6 +51,7 @@
    <wvobject type="array" fp_name="/uart_tb/m_interface/wr">
       <obj_property name="ElementShortName">wr[7:0]</obj_property>
       <obj_property name="ObjectShortName">wr[7:0]</obj_property>
+      <obj_property name="Radix">ASCIIRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/uart_tb/m_interface/tx_done">
       <obj_property name="ElementShortName">tx_done</obj_property>
@@ -65,8 +66,8 @@
       <obj_property name="ObjectShortName">i[16:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_tb/m_interface/data">
-      <obj_property name="ElementShortName">data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+      <obj_property name="ElementShortName">data[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[0:15][7:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/uart_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -123,23 +124,23 @@
    <wvobject type="array" fp_name="/uart_tb/rx/rd">
       <obj_property name="ElementShortName">rd[7:0]</obj_property>
       <obj_property name="ObjectShortName">rd[7:0]</obj_property>
-      <obj_property name="Radix">ASCIIRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/uart_tb/rx/rx_en">
       <obj_property name="ElementShortName">rx_en</obj_property>
       <obj_property name="ObjectShortName">rx_en</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_tb/rx/rd_byte">
-      <obj_property name="ElementShortName">rd_byte[9:0]</obj_property>
-      <obj_property name="ObjectShortName">rd_byte[9:0]</obj_property>
+      <obj_property name="ElementShortName">rd_byte[10:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_byte[10:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_tb/rx/counter">
       <obj_property name="ElementShortName">counter[8:0]</obj_property>
       <obj_property name="ObjectShortName">counter[8:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/uart_tb/rx/i">
-      <obj_property name="ElementShortName">i[4:0]</obj_property>
-      <obj_property name="ObjectShortName">i[4:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_tb/rx/CLKS_PER_BIT">
       <obj_property name="ElementShortName">CLKS_PER_BIT[31:0]</obj_property>
@@ -158,8 +159,8 @@
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_tb/m_interface/data">
-      <obj_property name="ElementShortName">data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+      <obj_property name="ElementShortName">data[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[0:15][7:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/uart_tb/m_interface/wr_en">
       <obj_property name="ElementShortName">wr_en</obj_property>
@@ -210,8 +211,44 @@
       <obj_property name="ObjectShortName">wr_byte[9:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_tb/m_interface/tx/counter">
-      <obj_property name="ElementShortName">counter[8:0]</obj_property>
-      <obj_property name="ObjectShortName">counter[8:0]</obj_property>
+      <obj_property name="ElementShortName">counter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/uart_tb/m_interface/tx/CLKS_PER_BIT">
+      <obj_property name="ElementShortName">CLKS_PER_BIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLKS_PER_BIT[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/uart_tb/m_interface/tx/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/uart_tb/m_interface/tx/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/uart_tb/m_interface/tx/wr_en">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/uart_tb/m_interface/tx/wr">
+      <obj_property name="ElementShortName">wr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wr[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/uart_tb/m_interface/tx/tx_sr">
+      <obj_property name="ElementShortName">tx_sr</obj_property>
+      <obj_property name="ObjectShortName">tx_sr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/uart_tb/m_interface/tx/tx_done">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/uart_tb/m_interface/tx/wr_byte">
+      <obj_property name="ElementShortName">wr_byte[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_byte[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/uart_tb/m_interface/tx/counter">
+      <obj_property name="ElementShortName">counter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[9:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/uart_tb/m_interface/tx/CLKS_PER_BIT">
       <obj_property name="ElementShortName">CLKS_PER_BIT[31:0]</obj_property>

@@ -71,5 +71,5 @@ module uart_tb();
 	
 
 	// m_uart_tx #(.CLKS_PER_BIT(87)) tx (clk, reset, wr_en, wr, tx_sr, tx_done);
-	m_uart_rx #(.CLKS_PER_BIT(87)) rx (clk, reset, RsTx, rd_en, rd);
+	m_uart_rx #(.CLKS_PER_BIT(910)) rx (clk, reset, RsTx, rd_en, rd);
 endmodule

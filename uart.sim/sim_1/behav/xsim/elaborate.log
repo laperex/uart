@@ -5,5 +5,19 @@ Running: /opt/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug ty
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/home/laperex/Programming/Vivado/uart/uart.srcs/sources_1/new/uart.v:28]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/laperex/Programming/Vivado/uart/uart.srcs/sources_1/new/interface.v" Line 3. Module interface doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/laperex/Programming/Vivado/uart/uart.srcs/sources_1/new/uart.v" Line 1. Module m_uart_tx(CLKS_PER_BIT=830) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/laperex/Programming/Vivado/uart/uart.srcs/sources_1/new/uart.v" Line 53. Module m_uart_rx(CLKS_PER_BIT=910) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/laperex/Programming/Vivado/uart/uart.srcs/sources_1/new/interface.v" Line 3. Module interface doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/laperex/Programming/Vivado/uart/uart.srcs/sources_1/new/uart.v" Line 1. Module m_uart_tx(CLKS_PER_BIT=830) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/laperex/Programming/Vivado/uart/uart.srcs/sources_1/new/uart.v" Line 53. Module m_uart_rx(CLKS_PER_BIT=910) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.m_uart_tx(CLKS_PER_BIT=830)
+Compiling module xil_defaultlib.interface
+Compiling module xil_defaultlib.m_uart_rx(CLKS_PER_BIT=910)
+Compiling module xil_defaultlib.uart_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot uart_tb_behav
